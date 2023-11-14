@@ -1,0 +1,108 @@
+plugins {
+    id 'com.android.application'
+}
+
+//maven { url 'https://jitpack.io' }
+android {
+    compileSdk 34
+    defaultConfig {
+        applicationId "cn.edu.hbpu.nil"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+        renderscriptTargetApi 21
+        renderscriptSupportModeEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+    }
+    // 自定义打包名称
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "nil.apk"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    buildToolsVersion '34.0.0'
+}
+
+dependencies {
+    compileOnly "org.projectlombok:lombok:1.18.30"
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'com.blankj:utilcodex:1.31.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.10'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation "org.java-websocket:Java-WebSocket:1.5.3"
+    //将文字转化为汉语拼音
+    implementation 'com.belerweb:pinyin4j:2.5.1'
+    //分组吸顶 使用了Androidx
+    implementation 'com.github.donkingliang:GroupedRecyclerViewAdapter:2.4.1'
+    implementation 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    //加载动画
+    implementation 'com.github.zzz40500:android-shapeLoadingView:1.0.3.2'
+    //图片加载
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    //图片选择器
+    implementation 'com.github.donkingliang:ImageSelector:2.2.1'
+    //    薛翔UI
+    implementation 'com.github.xuexiangjys:XUI:1.1.9'
+    //图片压缩
+    implementation 'com.github.ZS-ZhangsShun:EasyImageCompressor:1.0.7'
+    //气泡小红点
+    implementation 'com.github.bingoogolapple.BGABadgeView-Android:api:1.2.0'
+    annotationProcessor 'com.github.bingoogolapple.BGABadgeView-Android:compiler:1.2.0'
+    //Toast
+    implementation 'com.github.GrenderG:Toasty:1.5.2'
+    //rv侧滑菜单
+    implementation 'com.yanzhenjie.recyclerview:x:1.3.2'
+    //使用MMKV替代SharePreference
+    implementation 'com.tencent:mmkv:1.2.13'
+    //下拉刷新
+    implementation  'io.github.scwang90:refresh-layout-kernel:2.0.5'      //核心必须依赖
+    implementation  'io.github.scwang90:refresh-header-classics:2.0.5'    //经典刷新头
+    //单项/数字、二三级联动、日期/时间等滚轮选择器：
+    implementation 'com.github.gzu-liyujiang.AndroidPicker:WheelPicker:4.1.8'
+    //省市区地址选择器：
+    implementation 'com.github.gzu-liyujiang.AndroidPicker:AddressPicker:4.1.8'
+    //自定义选择器
+    implementation 'com.github.gzu-liyujiang.AndroidPicker:Common:4.1.8'
+    //加载动画
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    //对话框
+    def dialogx_version = "0.0.45.beta12"
+    implementation "com.github.kongzue.DialogX:DialogX:${dialogx_version}"
+    //扫一扫
+    implementation 'com.github.bingoogolapple.BGAQRCode-Android:zxing:1.3.8'
+
+    implementation 'org.projectlombok:lombok:1.18.30' //添加lombok依赖
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    implementation 'org.glassfish:javax.annotation:10.0-b28' //java注解
+
+}
+

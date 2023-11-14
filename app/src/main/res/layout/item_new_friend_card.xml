@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg_default"
+    android:orientation="vertical"
+    android:padding="12dp">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        app:shapeAppearance="@style/circleImageStyle"
+        android:src="@mipmap/loadingheader"
+        android:id="@+id/new_friend_header"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+         android:layout_height="match_parent"
+        android:layout_toEndOf="@id/new_friend_header">
+        <!--    用户信息-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="神里绫华"
+                android:textColor="@color/xui_config_color_gray_1"
+                android:textSize="16sp"
+                android:id="@+id/new_friend_username"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="我是神里绫华"
+                android:textColor="@color/xui_config_color_gray_3"
+                android:textSize="12sp"
+                android:id="@+id/new_friend_ver_info"
+                android:layout_marginTop="4dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+        </LinearLayout>
+        <!--        操作按钮-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|end">
+            <!--    拒绝-->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                app:cardBackgroundColor="@color/xui_config_color_red"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:rippleColor="@color/xui_config_color_gray_3"
+                android:id="@+id/new_friend_btn_refuse"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:text="@string/refuse"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </com.google.android.material.card.MaterialCardView>
+            <!--    同意-->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                app:cardBackgroundColor="@color/primary_500"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:rippleColor="@color/primary_200"
+                android:id="@+id/new_friend_btn_agree">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agree"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical|center_horizontal"/>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <!--        等待验证-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:text="@string/waiting_ver"
+            android:textSize="16sp"
+            android:textColor="@color/xui_config_color_gray_5"
+            android:gravity="center_vertical|end"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/new_friend_waiting_ver"
+            android:visibility="gone"/>
+        <!--        已拒绝-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:text="@string/refused"
+            android:textSize="16sp"
+            android:textColor="@color/xui_config_color_gray_5"
+            android:gravity="center_vertical|end"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/new_friend_refused"
+            android:visibility="gone"/>
+        <!--        已同意-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:text="@string/agreed"
+            android:textSize="16sp"
+            android:textColor="@color/xui_config_color_gray_5"
+            android:gravity="center_vertical|end"
+            android:layout_marginEnd="16dp"
+            android:id="@+id/new_friend_agreed"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</RelativeLayout>

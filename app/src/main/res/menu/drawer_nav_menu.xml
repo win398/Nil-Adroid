@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_album"
+        android:icon="@mipmap/album"
+        android:title="@string/my_album" />
+
+    <item
+        android:id="@+id/menu_file"
+        android:icon="@mipmap/file"
+        android:title="@string/my_document" />
+
+    <item
+        android:id="@+id/menu_favor"
+        android:icon="@mipmap/favor"
+        android:title="@string/my_favor" />
+    <item
+        android:id="@+id/menu_scan"
+        android:icon="@mipmap/scan"
+        android:title="@string/scan" />
+    <item
+        android:id="@+id/menu_setting"
+        android:icon="@mipmap/setting"
+        android:title="@string/setting" />
+
+
+</menu>

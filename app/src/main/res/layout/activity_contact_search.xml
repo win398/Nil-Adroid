@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ContactSearchActivity"
+    android:orientation="vertical"
+    android:background="@color/bg_contact"
+    android:id="@+id/contact_search_container">
+    <!--        搜索栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="16dp"
+        android:background="@color/bg_contact">
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/back_gray"
+            android:background="@color/bg_contact"
+            android:id="@+id/btn_back_contact_search"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/todo" />
+        <EditText
+            android:id="@+id/et_contact_search"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_content_search"
+            android:hint="@string/search"
+            android:textColorHint="#bcbcbc"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:inputType="none"
+            android:autofillHints=""
+            android:layout_toEndOf="@id/btn_back_contact_search"
+            android:singleLine="true"
+            android:maxLength="50"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/et_clear"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:id="@+id/contact_et_clear"
+            android:contentDescription="@string/todo" />
+    </RelativeLayout>
+    <!--    搜索结果-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contact_search_rv"/>
+</LinearLayout>

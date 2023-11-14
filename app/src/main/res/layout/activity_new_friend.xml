@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NewFriendActivity"
+    android:background="@drawable/bg_default_nav"
+    android:orientation="vertical"
+    android:id="@+id/new_friend_container">
+    <!--导航栏     -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_default_nav"
+        android:id="@+id/new_friend_nav"
+        android:padding="12dp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@mipmap/back"
+            app:shapeAppearance="@style/circleImageStyle"
+            android:layout_centerVertical="true"
+            android:id="@+id/new_friend_back"
+            android:layout_marginStart="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_friend"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <!--    主体-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_default"
+        android:orientation="vertical">
+        <com.yanzhenjie.recyclerview.SwipeRecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_new_friend"/>
+
+        <include layout="@layout/null_request"
+            android:id="@+id/null_new_friend"/>
+    </LinearLayout>
+
+</LinearLayout>

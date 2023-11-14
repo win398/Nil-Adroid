@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AllContactsFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_all_contacts"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="gone"
+        android:id="@+id/blank_all_contacts">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/blank_contact"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blank_tip"
+            android:textColor="@color/xui_config_color_gray_2"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+
+    <cn.edu.hbpu.nil.widget.SideBar
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:paddingEnd="20dp"
+        android:paddingStart="100dp"
+        android:textColor="@color/contact_tint"
+        android:textSize="14sp"
+        android:id="@+id/sidebar_all_contacts"/>
+
+</RelativeLayout>

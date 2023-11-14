@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddContactActivity"
+    android:orientation="vertical"
+    android:background="@color/bg_main"
+    android:id="@+id/contact_add_container">
+    <!-- 搜索栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="16dp"
+            android:background="@color/bg_main">
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/back_gray"
+            android:background="@color/bg_main"
+            android:id="@+id/btn_back_contact_add"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/todo" />
+        <EditText
+            android:id="@+id/et_contact_add"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_contact_add"
+            android:hint="@string/hint_contact_add"
+            android:textColorHint="#bcbcbc"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="100dp"
+            android:textSize="16sp"
+            android:textColor="#2B2828"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:inputType="number"
+            android:autofillHints=""
+            android:layout_toEndOf="@id/btn_back_contact_add"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:maxLength="20"/>
+        <ImageButton
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@mipmap/contact_add_search"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:padding="6dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/bg_btn_contact_add_search"
+            android:id="@+id/btn_contact_add"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/et_clear"
+            android:layout_toStartOf="@id/btn_contact_add"
+            android:layout_marginEnd="13dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:id="@+id/contact_add_et_clear"
+            android:contentDescription="@string/todo" />
+    </RelativeLayout>
+    <include layout="@layout/loading_page"
+        android:visibility="gone"
+        android:id="@+id/addContactLoadingView"/>
+    <include layout="@layout/blank_page"
+        android:visibility="gone"
+        android:id="@+id/addContactBlankView"/>
+    <include layout="@layout/item_user_card"
+        android:visibility="gone"
+        android:id="@+id/addContactUserView"/>
+
+</LinearLayout>

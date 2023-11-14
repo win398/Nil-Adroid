@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="ic_launcher_background">#FFFFFF</color>
+    <color name="trans">#00000000</color>
+    <color name="divider">#e8e7e7</color>
+    <color name="blue">#4F81FD</color>
+
+    <color name="bar">#F8F3F3</color>
+    <color name="bg_msg">#F8F3F3</color>
+    <color name="index_big">#413C3C</color>
+    <color name="contact_tint">#675959</color>
+    <color name="contact_deep">#303030</color>
+    <color name="bg_contact">#F1F1F1</color>
+    <color name="bg_default">#F1F1F1</color>
+    <color name="bg_main">#E8E3E3</color>
+    <color name="bg_personal">#F3F3F3</color>
+    <color name="black_light">#393434</color>
+    <color name="blue_light">#B04FB2FD</color>
+    <color name="primary_200">#64B9FA</color>
+    <color name="primary_500">#3194DF</color>
+    <color name="primary_700">#1186DF</color>
+    <color name="text_pressed_color">#D2D3D5</color>
+    <color name="text_color">#00000000</color>
+    <color name="cover">#79242323</color>
+
+
+</resources>

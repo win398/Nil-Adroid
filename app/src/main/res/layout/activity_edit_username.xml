@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.EditUsernameActivity"
+    android:orientation="vertical"
+    android:background="@color/bg_main">
+    <!-- 导航栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_default_nav"
+        android:id="@+id/edit_username_nav">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/back"
+                android:layout_centerVertical="true"
+                android:id="@+id/edit_username_back"
+                android:layout_marginStart="12dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="编辑用户名"
+                android:textColor="@color/bg_default"
+                android:textSize="16sp"
+                android:layout_margin="12dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/complete"
+                android:textColor="@color/bg_default"
+                android:textSize="16sp"
+                android:layout_margin="12dp"
+                android:id="@+id/edit_username_ok"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <!--    修改用户名-->
+    <com.xuexiang.xui.widget.edittext.ClearEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_default"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:hint="@string/hint_username"
+        android:textColor="@color/black_light"
+        android:textColorHint="@color/xui_config_color_gray_5"
+        android:id="@+id/edit_username_et"
+        android:maxLength="10"/>
+</LinearLayout>
